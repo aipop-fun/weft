@@ -1,0 +1,27 @@
+{
+  "name": "weft",
+  "version": "0.1.0",
+  "author": "codingsh <codingsh@pm>",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun --watch apps/server/src/main.ts",
+    "start": "bun apps/server/src/main.ts",
+    "web": "bun --watch apps/web/src/main.ts",
+    "cli": "bun apps/cli/src/main.ts",
+    "test": "bun test",
+    "commit": "czg",
+    "commitlint": "commitlint --edit",
+    "prepare": "bash scripts/install-hooks.sh",
+    "release": "bash scripts/release.sh"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.6.0",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0"
+  }
+}
