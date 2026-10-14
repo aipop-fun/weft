@@ -1,0 +1,6 @@
+{
+  "name": "@weft/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": { "weft": "./src/main.ts" }
+}
