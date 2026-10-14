@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  weft:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    environment:
+      LLM_PROVIDER: openrouter
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      OPENROUTER_MODEL: auto-free
+      GITHUB_APP_ID: ${GITHUB_APP_ID}
+      GITHUB_WEBHOOK_SECRET: ${GITHUB_WEBHOOK_SECRET}
+      GITHUB_PRIVATE_KEY_PATH: /run/secrets/github-private-key
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      GOOGLE_REDIRECT_URI: ${GOOGLE_REDIRECT_URI}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET}
+      WEFT_DB: /data/weft.db
+      WEFT_URL: http://weft:3000
+      WEFT_WEB: ${WEFT_WEB:-http://localhost:3001}
+      SITE_URL: ${SITE_URL:-http://localhost:3001}
+    volumes:
+      - weft-data:/data
+    secrets:
+      - github-private-key
+
+secrets:
+  github-private-key:
+    file: ./private-key.pem
+
+volumes:
+  weft-data:

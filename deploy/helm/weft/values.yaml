@@ -1,0 +1,36 @@
+image:
+  repository: ghcr.io/weftdev/weft
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  webPort: 3001
+  apiPort: 3000
+
+ingress:
+  enabled: false
+  className: nginx
+  host: weft.example.com
+  tls: false
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 256Mi
+
+env:
+  LLM_PROVIDER: openrouter
+  OPENROUTER_MODEL: auto-free
+
+existingSecret: weft-secrets
+
+persistence:
+  enabled: true
+  size: 5Gi
+  storageClass: ""
