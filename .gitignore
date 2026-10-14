@@ -1,0 +1,53 @@
+# --- dependências ---
+node_modules/
+.pnp.*
+*.lock.bak
+
+# --- segredos ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+private-key.pem
+.secrets/
+
+# --- banco de dados ---
+data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# --- backups ---
+*.bak
+*.backup
+backup-*.db.gz
+
+# --- builds ---
+dist/
+build/
+.next/
+out/
+
+# --- sistema ---
+.DS_Store
+Thumbs.db
+*.log
+logs/
+
+# --- editores ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- deploy ---
+.fly/
+deploy/docker/private-key.pem
+
+# --- temporários ---
+tmp/
+temp/
+*.tmp

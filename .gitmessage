@@ -1,0 +1,9 @@
+# <tipo>(<escopo>): <assunto>
+#
+# Corpo (opcional): explique o que e por quê, não como.
+#
+# Rodapé (opcional): BREAKING CHANGE, Closes #123
+#
+# Tipos: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert
+# Escopos: server, web, db, github, llm, intent, rules, review, middleware,
+#          auth, billing, audit, feedback, i18n, deploy, docs
