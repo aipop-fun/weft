@@ -1,0 +1,8 @@
+{
+  "name": "@weft/intent",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./src/classify.ts",
+    "./adversarial": "./src/adversarial.ts"
+  }
+}

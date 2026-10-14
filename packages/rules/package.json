@@ -1,0 +1,10 @@
+{
+  "name": "@weft/rules",
+  "version": "0.1.0",
+  "main": "./src/decide.ts",
+  "types": "./src/decide.ts",
+  "exports": {
+    ".": "./src/decide.ts",
+    "./verticals": "./src/verticals/index.ts"
+  }
+}

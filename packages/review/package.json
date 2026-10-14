@@ -1,0 +1,6 @@
+{
+  "name": "@weft/review",
+  "version": "0.1.0",
+  "main": "./src/orchestrate.ts",
+  "types": "./src/orchestrate.ts"
+}
