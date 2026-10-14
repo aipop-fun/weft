@@ -1,0 +1,36 @@
+name: Bug
+description: Reportar um comportamento incorreto
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: O que aconteceu
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que era esperado
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão / commit
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Ambiente
+      placeholder: Bun 1.3.2, macOS 15, OpenRouter auto-free

@@ -1,0 +1,30 @@
+name: Feature
+description: Sugerir uma funcionalidade
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qual problema isso resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solução proposta
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Alternativas consideradas
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Escopo
+      options:
+        - Core (classificação, regras)
+        - Integração (GitHub, GitLab)
+        - UI / dashboard
+        - Deploy / self-hosted
+        - Enterprise

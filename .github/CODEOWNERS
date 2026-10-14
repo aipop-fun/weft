@@ -1,0 +1,14 @@
+# Padrão global
+*                       @aipop-fun
+
+# Segurança e multi-tenant
+/packages/middleware/   @aipop-fun
+/packages/auth/         @aipop-fun
+/packages/db/           @aipop-fun
+
+# Regra dura por path (não permitir alteração sem revisão)
+/packages/rules/        @aipop-fun
+
+# Deploy e infra
+/deploy/                @aipop-fun
+/.github/workflows/     @aipop-fun
