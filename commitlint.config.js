@@ -6,9 +6,9 @@ export default {
       "test", "build", "ci", "chore", "revert"
     ]],
     "scope-enum": [1, "always", [
-      "server", "web", "db", "github", "llm", "intent", "rules",
+      "server", "web", "cli", "db", "github", "llm", "intent", "rules",
       "review", "middleware", "auth", "billing", "audit", "feedback",
-      "i18n", "deploy", "docs", "deps", "release"
+      "i18n", "deploy", "docs", "deps", "release", "scripts", "repo", "ci"
     ]],
     "subject-case": [2, "always", ["lower-case", "sentence-case"]],
     "subject-full-stop": [2, "never", "."],
